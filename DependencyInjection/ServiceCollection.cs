@@ -35,8 +35,6 @@ internal sealed class ServiceCollection
             throw new Exception("Cannot register interface or abstract class");
         }
 
-        var inf = typeof(T).GetInterfaces();
-
         var service = new Service(typeof(T), lifetime);
 
         AddService(service);
